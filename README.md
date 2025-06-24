@@ -65,4 +65,8 @@ model/
 ▶️**Run the App**
 python app.py
 
+🙋‍♂️ **Author**
+Nikhil Goral
+📧 [nikhilgoral587@gmail.com]
+🌐 (LinkedIn)[https://www.linkedin.com/in/nikhil-goral-340266259]
 
