@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ movie.Title }} - Details</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f4f4;
+            padding: 40px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            background: white;
+            margin: auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .movie-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+        }
+
+        img {
+            width: 300px;
+            border-radius: 10px;
+        }
+
+        .details {
+            text-align: left;
+        }
+
+        .details h2 {
+            margin-top: 0;
+        }
+
+        .details p {
+            line-height: 1.6;
+        }
+
+        .back-link {
+            margin-top: 30px;
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 18px;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+
+        .back-link:hover {
+            background-color: #0056b3;
+        }
+
+        .error {
+            color: red;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if movie.Error %}
+            <div class="error">{{ movie.Error }}</div>
+        {% else %}
+            <div class="movie-header">
+                <img src="{{ movie.Poster }}" alt="{{ movie.Title }} Poster">
+                <div class="details">
+                    <h2>{{ movie.Title }} ({{ movie.Year }})</h2>
+                    <p><strong>Genre:</strong> {{ movie.Genre }}</p>
+                    <p><strong>Runtime:</strong> {{ movie.Runtime }}</p>
+                    <p><strong>IMDb Rating:</strong> {{ movie.imdbRating }}</p>
+                    <p><strong>Director:</strong> {{ movie.Director }}</p>
+                    <p><strong>Actors:</strong> {{ movie.Actors }}</p>
+                </div>
+            </div>
+            <p style="margin-top: 20px;"><strong>Plot:</strong> {{ movie.Plot }}</p>
+        {% endif %}
+
+        <a class="back-link" href="/">← Back to Recommendations</a>
+    </div>
+</body>
+</html>
