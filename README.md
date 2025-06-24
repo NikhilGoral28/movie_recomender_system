@@ -15,22 +15,6 @@ Welcome to the **Movie Recommendation System**, a content-based recommendation e
 
 ---
 
-## 📁 Project Structure
-
-├── app.py # Flask backend
-├── templates/
-│ └── index.html # Frontend UI
-├── model/
-│ ├── final_movies.pkl # Preprocessed movie data
-│ └── cosine_sim.pkl # Similarity matrix
-├── static/
-│ └── style.css # Custom styling
-└── README.md
-
-
-
----
-
 ## 🧠 How It Works
 
 1. **Data Preprocessing**: Merged metadata from TMDB (title, genres, overview).
